@@ -1,7 +1,7 @@
 
 from flask import render_template,request,redirect,url_for
 from pip import main
-from .import app
+from . import main
 from ..requests import get_movies,get_movie,search_movie
 from ..models import Review
 from .forms import ReviewForm
