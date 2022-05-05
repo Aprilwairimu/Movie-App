@@ -23,7 +23,10 @@
             {%else%}
             <p>No profile picture</p>
             {% if user == current_user %}
-            <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
+            <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype="multipart/form-data">
+                <input type="file" name="photo" class="form-control" required>
+                <input type="submit">
+            </form>
             {% endif %}
         </div>
     </div>
